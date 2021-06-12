@@ -4,13 +4,19 @@ Flutter Bloc Concepts
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Cubit - subset of the features of bloc<br>
+Observes stream of states, emits functions that are not part of a stream
 
-A few resources to get you started if this is your first Flutter project:
+Bloc<br>
+Observes stream of states, emits stream of events
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+BlocProvider provides a single instance of a Bloc (DI)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+BlocBuilder - re-builds UI based on bloc state changes -> called multiple times by Flutter engine<br>
+Builder function must be pure (return val depend on function arg)
+
+BlocListener - observes state change
+
+BlocConsumer - BlocBuilder + BlocListener
+
+RepositoryProvider provides a single instance of Provider (DI)
